@@ -1,0 +1,170 @@
+body {
+    max-width: 500px;
+    margin: 0px auto;
+    position: relative;
+    height: 850px;
+    background: #EF9FA4;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 18%;
+        background: url(https://www.okeydostavka.ru/wcsstore/OKMarketSAS/share/promo_pages/landing/QUIZ/bg-t.png) no-repeat left top;
+        background-size: contain;
+        z-index: -1;
+        pointer-events: none;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 30%;
+        background: url(https://www.okeydostavka.ru/wcsstore/OKMarketSAS/share/promo_pages/landing/QUIZ/bg-b.png) no-repeat bottom right;
+        background-size: contain;
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+#app {
+    padding: 18% 10px 50px;
+    position: relative;
+    color: #fff;
+    height: 700px;
+    overflow: hidden;
+}
+
+.app-bg {
+    &__bottom,
+    &__top {
+        position: absolute;
+    }
+    &__top {
+        top: 0;
+        left: 0;
+        max-width: 60%;
+    }
+    &__bottom {
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        max-width: 80%;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.quiz {
+    &-start {
+        text-align: center;
+        img {
+            margin: 0px auto 20px 20px;
+        }
+        p {
+            margin-bottom: 30px;
+            font-size: 15px;
+            line-height: 1.3;
+        }
+    }
+    &-title {
+        font-weight: 700;
+        margin-top: 40%;
+        margin-bottom: 50px;
+        font-size: 22px;
+        line-height: 1.5;
+        text-align: center;
+        line-height: 1;
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+    }
+    &-promo {
+        text-align: center;
+        margin-top: 0px;
+        font-size: 15px;
+        font-weight: 700;
+        &__promocode {
+            width: 80%;
+            margin: 10px auto 0px;
+            display: flex;
+            height: 50px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 28px;
+            border: 1px solid rgba($color: #FFF, $alpha: 0.3);
+            background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.2) 28.69%, rgba(255, 255, 255, 0) 100%);
+        }
+        &__desc {
+            margin-top: 30px;
+            font-size: 13px;
+            line-height: 1.3;
+            text-align: center;
+            opacity: 0.7;
+        }
+    }
+    &-answer {
+        font-size: 15px;
+        width: 80%;
+        height: 40px;
+        margin: 0px auto;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px;
+        background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.2) 28.69%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 8px;
+        transition: .4s all ease-in-out;
+        border: 1px solid rgba($color: #FFF, $alpha: 0.3);
+        &__success {
+            background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.2) 28.69%, rgba(255, 255, 255, 0) 100%), #29AD04;
+        }
+        &__wrong {
+            background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.2) 28.69%, rgba(255, 255, 255, 0) 100%), #E30613;
+        }
+        &__hidden {
+            pointer-events: none;
+        }
+    }
+    &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 48px;
+        border-radius: 8px;
+        background: #A6698D;
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 5;
+        &__hidden {
+            display: none;
+        }
+    }
+    &-true,
+    &-loose {
+        text-align: center;
+        margin: 30px auto 0px;
+        font-size: 13px;
+    }
+
+}
